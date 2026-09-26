@@ -19,9 +19,10 @@
 ---
 
 ## 📍 Active Chapter Status
-- **Current Active Chapter:** `Pre-flight Setup` (AI Assistant Setup, Rules, Virtual Team, Git Init & Push)
+- **Current Active Chapter:** `CHAPTER 3: Next.js Architecture & Project Skeleton Setup`
 - **Status:** In Progress 🟡
-- **Next Target:** `CHAPTER 1: Art Direction, Color Palette & Storyboard Finalization` (Pending User Approval)
+- **Completed Milestones:** `Pre-flight Setup` (Completed ✅), `CHAPTER 1: Art Direction & Storyboard` (Completed ✅), `CHAPTER 2: Prompt Engineering & Studio Assets` (Completed ✅)
+- **Current Objective:** Initialize Next.js App Router, install Three.js / R3F / GSAP / Lenis, organize media assets, and verify 60 FPS skeleton.
 
 ---
 

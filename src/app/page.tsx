@@ -2,12 +2,13 @@
 
 import SceneContainer from "@/components/canvas/SceneContainer";
 import SmoothScrollProvider from "@/components/ui/SmoothScrollProvider";
+import ScrollyVideoScrubber from "@/components/scrollytelling/ScrollyVideoScrubber";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <SmoothScrollProvider>
-      <main className="relative min-h-[300vh] bg-[#081C15] text-[#F9F7F1] selection:bg-[#FFB703] selection:text-[#081C15]">
+      <main className="relative min-h-[400vh] bg-[#081C15] text-[#F9F7F1] selection:bg-[#FFB703] selection:text-[#081C15]">
         {/* Background 3D WebGL Canvas Layer */}
         <SceneContainer />
 
@@ -81,43 +82,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ACT 2: Hero Video Showcase & Dynamic Macro Inspection */}
-        <section className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 py-24">
-          <div className="max-w-6xl mx-auto w-full space-y-12">
-            <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-[#1B4332]/40 pb-6 gap-4">
-              <div>
-                <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#FFB703]">
-                  Act 02 // Precision Kinetic Capture
-                </span>
-                <h2 className="font-serif text-4xl md:text-6xl font-normal text-[#F9F7F1] mt-2">
-                  Zero-Gravity <span className="italic font-light text-[#FFB703]">Nectar Slicing.</span>
-                </h2>
-              </div>
-              <div className="font-mono text-xs text-[#F9F7F1]/50 tracking-wider">
-                1000 FPS PHANTOM HIGH-SPEED OPTICS
-              </div>
-            </div>
-
-            {/* Video Canvas Container */}
-            <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden border border-[#1B4332]/60 shadow-2xl bg-black">
-              <video
-                src="/assets/videos/hero_mango_slice.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between pointer-events-none">
-                <div className="font-mono text-[10px] uppercase tracking-[0.2em] bg-black/60 backdrop-blur-md px-3 py-1.5 rounded border border-white/10 text-[#10B981]">
-                  PFO CINEMATICS // 8K RAW CAPTURE
-                </div>
-                <div className="font-mono text-[10px] uppercase tracking-[0.2em] bg-black/60 backdrop-blur-md px-3 py-1.5 rounded border border-white/10 text-[#FFB703]">
-                  ZERO SYNTHETIC ADDITIVES
-                </div>
-              </div>
-            </div>
-          </div>
+        {/* ACT 2: Interactive GSAP Scrolly Video Scrubber (Apple-Style Pinned Interaction) */}
+        <section className="relative z-20">
+          <ScrollyVideoScrubber />
         </section>
 
         {/* ACT 3: Laboratory Bio-Purity & Harvest Reserve */}

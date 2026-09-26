@@ -1,15 +1,40 @@
 const BigText = () => {
   return (
-    <section className="w-screen min-h-screen overflow-hidden bg-emerald-950 text-amber-400">
-      <h2 className="grid w-full gap-[2vw] py-16 text-center font-serif font-black uppercase leading-[0.8]">
-        <div className="text-[28vw] tracking-tighter">PURE</div>
-        <div className="grid gap-[2vw] text-[20vw] md:flex md:justify-center md:gap-8 md:text-[8vw] font-sans font-bold tracking-widest text-emerald-200">
-          <span className="inline-block">FRESH</span>
-          <span className="inline-block">•</span>
-          <span className="inline-block">HONEST</span>
+    <section className="w-full overflow-hidden bg-emerald-950 text-amber-400 py-16 md:py-24 px-4 border-t border-emerald-900/60 selection:bg-amber-400 selection:text-emerald-950">
+      <div className="max-w-6xl mx-auto text-center">
+        {/* Purity Creed Badge */}
+        <div className="mb-6">
+          <span className="inline-block font-mono text-xs uppercase tracking-widest text-emerald-300 border border-emerald-500/30 bg-emerald-900/50 px-4 py-1.5 rounded-full shadow-sm">
+            THE PFO HARVEST PLEDGE
+          </span>
         </div>
-        <div className="text-[24vw] tracking-tighter text-amber-500">ORGANIC</div>
-      </h2>
+
+        {/* Structured Editorial Display Hierarchy */}
+        <h2 className="flex flex-col items-center justify-center leading-none">
+          <span className="font-serif font-black uppercase tracking-tight text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-amber-300 drop-shadow">
+            PURE
+          </span>
+
+          <span className="my-2 sm:my-4 flex items-center justify-center gap-3 sm:gap-6 font-sans text-lg sm:text-2xl md:text-3xl font-bold tracking-widest text-emerald-200 uppercase">
+            <span>FRESH</span>
+            <span className="text-amber-400">•</span>
+            <span>HONEST</span>
+          </span>
+
+          <span className="font-serif font-black uppercase tracking-tight text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-amber-500 drop-shadow">
+            ORGANIC
+          </span>
+        </h2>
+
+        {/* Origin & Guarantee Meta */}
+        <div className="mt-8 font-mono text-[11px] sm:text-xs text-stone-400 uppercase tracking-widest flex flex-wrap items-center justify-center gap-2 sm:gap-4">
+          <span>SOVEREIGN BENGAL HARVEST</span>
+          <span className="text-amber-400">•</span>
+          <span>0.00% SYNTHETIC RESIDUE</span>
+          <span className="text-amber-400">•</span>
+          <span>COLD DISPATCH HUB</span>
+        </div>
+      </div>
     </section>
   );
 };

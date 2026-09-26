@@ -35,6 +35,7 @@
   - Zero soda leftovers: Yellow/orange fizzy footer and soda blue sky removed; replaced with rich organic palette (`#FEF3C7`, `#FAF5EB`, `#064E3B`, `#1C1917`).
   - E-Commerce Engine: Slide-over harvest bag drawer, quantity selectors, live stock scarcity counters, payment gateways (bKash, Nagad, Rocket, Visa, Mastercard, COD).
   - Typography Alignment: Resized BigText creed section from monster 28vw to containerized responsive hierarchy, perfectly harmonizing with the luxury footer. (Commit `f6e3669` ✅)
+  - Official Brand Assets & E-Commerce Harmonization: Integrated official circular PFO Farm logo (`pfo_logo.jpg`), modernized Navbar with clean e-commerce categories, replaced all archaic terms ("Sovereign", "Harvest Lot", "Reserve") with standard high-conversion terms ("100% Pure, Fresh & Organic", "Add to Cart", "Order Now"). (Commit `84f9f3a` ✅)
 
 ---
 

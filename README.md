@@ -1,23 +1,63 @@
-# PFO – Pure Fresh Organic (3D Scrollytelling Website)
+# Fizzi - 3D E-commerce Landing Page
 
-> **Contest Project:** 3D Website Development (Interactive Scrollytelling Animation)  
-> **Topic:** PFO – Pure Fresh Organic — Fresh Fruits & Organic Products Website  
-> **Lead Developer:** Sadman Sakib  
-> **Architecture & Assistance:** Google Antigravity (AI Pair Programmer)  
-> **Stack:** Next.js (App Router), Three.js, React Three Fiber, GSAP ScrollTrigger, Lenis, Tailwind CSS
+Fizzi is a modern 3D e-commerce landing page built with Three.js, React Three Fiber, and GSAP, combined with Next.js for seamless performance and interactive user experiences. This project showcases cutting-edge web technologies and a fully responsive design.
+
+![Website Preview](https://fizzi-3d-ecommerce-landing.vercel.app/Screenshot.png)
 
 ---
 
-## 🌟 Project Narrative Flow
-1. **Scene 1: From the Earth (Hero Section)** — Pristine orchard ambiance, floating 3D organic citrus fruit, sunlight & atmospheric particles.
-2. **Scene 2: Untouched by Chemicals (Macro Inspection)** — Micro zoom-in on fruit texture, natural dew drops, and interactive bio-scan HUD (100% Organic, Zero Pesticides).
-3. **Scene 3: The Pure Core (Interactive Exploded/Slice View)** — Smooth scroll splitting the fruit to reveal cellular pulp, juicy cross-section, and vital nutrients.
-4. **Scene 4: The Harvest Basket (Product Showcase)** — Cold-pressed juices, pure honey, and fresh crates in 3D perspective.
-5. **Scene 5: Direct to Your Table (Packaging & CTA)** — Eco-friendly craft box assembling for delivery with final "Order Fresh Today" action.
+## Demo
+
+Check out the live demo: [Fizzi Live Demo](https://fizzi-3d-ecommerce-landing.vercel.app/)
 
 ---
 
-## 🛠 Project Structure & Guidelines
-Please refer to:
-- [`GEMINI.md`](./GEMINI.md) — Permanent workspace rules, behavior guidelines, and constraints.
-- [`PROJECT_MEMORY.md`](./PROJECT_MEMORY.md) — Living state tracker, chapter logs, decisions, and asset manifests.
+## Features
+
+- Interactive 3D visuals with **Three.js** and **React Three Fiber**.
+- Smooth animations powered by **GSAP**.
+- Fully responsive and optimized for all devices.
+- Styled with **TailwindCSS**.
+- Easy state management using **Zustand**.
+- Performance monitoring with **r3f-perf**.
+
+---
+
+## Getting Started
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/sheyda0/fizzi-3d-ecommerce-landing
+   cd fizzi-3d-ecommerce-landing
+
+   ```
+
+2. **Install Dependencies**:
+
+   ```bash
+   npm install
+
+   ```
+
+3. **Run the Development Server**:
+
+   ```bash
+   npm run dev
+
+   ```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+---
+
+## Learn More
+
+To learn more about the technologies used in this project, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API.
+- [React Three Fiber Documentation](https://docs.pmnd.rs/react-three-fiber/getting-started) - Learn how to create 3D experiences with React.
+- [Three.js Documentation](https://threejs.org/docs/index.html) - Learn about 3D rendering and modeling.
+- [GSAP Documentation](https://greensock.com/docs/) - Learn about creating animations with GSAP.

@@ -34,6 +34,7 @@
   - 3D Models: Real 3D Alphonso Mango & Sundarban Honey Jar with custom PFO cylindrical wrap.
   - Zero soda leftovers: Yellow/orange fizzy footer and soda blue sky removed; replaced with rich organic palette (`#FEF3C7`, `#FAF5EB`, `#064E3B`, `#1C1917`).
   - E-Commerce Engine: Slide-over harvest bag drawer, quantity selectors, live stock scarcity counters, payment gateways (bKash, Nagad, Rocket, Visa, Mastercard, COD).
+  - Typography Alignment: Resized BigText creed section from monster 28vw to containerized responsive hierarchy, perfectly harmonizing with the luxury footer. (Commit `f6e3669` ✅)
 
 ---
 

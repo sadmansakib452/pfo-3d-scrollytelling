@@ -28,7 +28,7 @@ export function Can({ flavor = "royalMango", scale = 2, ...props }) {
     return (
       <group {...props} dispose={null} scale={scale}>
         <Center>
-          <primitive object={clonedHoney} scale={0.11} rotation={[0, Math.PI / 6, 0]} />
+          <primitive object={clonedHoney} scale={4.2} rotation={[0, Math.PI / 6, 0]} />
         </Center>
       </group>
     );
@@ -38,7 +38,7 @@ export function Can({ flavor = "royalMango", scale = 2, ...props }) {
   return (
     <group {...props} dispose={null} scale={scale}>
       <Center>
-        <primitive object={clonedHoney} scale={0.11} rotation={[0, -Math.PI / 4, 0]} />
+        <primitive object={clonedHoney} scale={4.2} rotation={[0, -Math.PI / 4, 0]} />
       </Center>
     </group>
   );

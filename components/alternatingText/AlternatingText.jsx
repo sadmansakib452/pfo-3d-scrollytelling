@@ -99,29 +99,29 @@ const AlternatingText = () => {
                   </div>
                 </div>
 
-                {/* Studio-Grade Product Photography Column (Desktop & Mobile) */}
-                <div
-                  className={`z-10 ${
-                    !isDesktop
-                      ? "order-1"
-                      : isTextLeft
-                        ? "md:col-start-2 md:order-2"
-                        : "md:col-start-1 md:order-1"
-                  }`}
-                >
-                  <div className="group relative overflow-hidden rounded-3xl shadow-2xl border border-amber-900/15 bg-white/40 backdrop-blur-sm p-2 transition-transform duration-700 hover:scale-[1.02]">
+                {/* Mobile-Only Product Photography Preview (Desktop displays the live 3D Model) */}
+                <div className="z-10 order-1 md:hidden">
+                  <div className="group relative overflow-hidden rounded-3xl shadow-2xl border border-amber-900/15 bg-white/40 backdrop-blur-sm p-2">
                     <Image
                       src={item.image}
                       alt={item.alt}
                       width={700}
                       height={500}
-                      className="w-full h-[320px] sm:h-[400px] md:h-[460px] object-cover rounded-2xl group-hover:scale-105 transition-transform duration-700"
+                      className="w-full h-[320px] sm:h-[400px] object-cover rounded-2xl"
                     />
                     <div className="absolute bottom-6 left-6 font-mono text-xs uppercase tracking-widest text-white bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/20">
                       {item.badge} • 100% ORGANIC
                     </div>
                   </div>
                 </div>
+
+                {/* Desktop 3D Model Spatial Buffer */}
+                <div
+                  className={`hidden md:block pointer-events-none ${
+                    isTextLeft ? "md:col-start-2" : "md:col-start-1"
+                  }`}
+                  aria-hidden="true"
+                />
               </div>
             );
           })}

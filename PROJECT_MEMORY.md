@@ -19,19 +19,21 @@
 ---
 
 ## 📍 Active Chapter Status
-- **Current Active Chapter:** `CHAPTER 5C: SkyDrive Purity Chamber & 3D Scale Harmonization`
-- **Status:** Completed & Production Verified 🟢 (Commit: `815d2ac`)
+- **Current Active Chapter:** `CHAPTER 5: Full Page E-Commerce, 3D Scale & UX Overhaul (5A - 5F)`
+- **Status:** All Milestones (5A to 5F) Completed & Production Verified 🟢
 - **Completed Milestones:**
   1. `CHAPTER 5A: Hero 3D Overlap Elimination & Laboratory HUD Scale` (Commit `5b10b42` ✅)
   2. `CHAPTER 5B: Luxury E-Commerce Navbar & Responsive Drawer Cart` (Commit `bd18024` ✅)
   3. `CHAPTER 5C: SkyDrive Purity Chamber & Organic Harmonization` (Commit `815d2ac` ✅)
-- **Next Milestone in Queue:** `CHAPTER 5D: Carousel E-Commerce Engine (Add to Cart, Qty, Scarcity Badge)`
+  4. `CHAPTER 5D: Carousel E-Commerce Integration (Qty, Scarcity & Add-to-Basket)` (Commit `dc09258` ✅)
+  5. `CHAPTER 5E: Alternating Scrollytelling Precision Sync & Reserve Actions` (Commit `617f153` ✅)
+  6. `CHAPTER 5F: 4-Column Luxury E-Commerce Footer & Secured Payment Bar` (Commit `617f153` ✅)
 - **Live Local URL:** http://localhost:3000
 - **Foundation:** Next.js 14.2 (App Router) + React Three Fiber + Three.js 0.171 + GSAP ScrollTrigger + Lenis Smooth Scroll
-- **3D Scale Calibration:**
-  - `Can.jsx` default scale reduced from `2` to `1` (eliminates double-scaling overflow across all sections).
-  - Mango height calibrated to ~0.63 units (`scale={7.2}`).
-  - Honey Jar calibrated to ~0.68 units (`scale={4.2}` with custom PFO label band).
+- **Full Page Quality Assurance:**
+  - 3D Models: Real 3D Alphonso Mango & Sundarban Honey Jar with custom PFO cylindrical wrap.
+  - Zero soda leftovers: Yellow/orange fizzy footer and soda blue sky removed; replaced with rich organic palette (`#FEF3C7`, `#FAF5EB`, `#064E3B`, `#1C1917`).
+  - E-Commerce Engine: Slide-over harvest bag drawer, quantity selectors, live stock scarcity counters, payment gateways (bKash, Nagad, Rocket, Visa, Mastercard, COD).
 
 ---
 
@@ -39,9 +41,9 @@
 - [x] **CHAPTER 5A:** Hero 3D Dual-Flagship Layout & Overlap Elimination (Mango + Honey Jar)
 - [x] **CHAPTER 5B:** Luxury E-Commerce Navbar, Currency Badge & Slide-over Cart Drawer
 - [x] **CHAPTER 5C:** SkyDrive Organic Golden Orchard Mist & 3D Model Proportion Harmonization
-- [ ] **CHAPTER 5D:** Carousel E-Commerce Integration (Interactive Qty, Direct Add-to-Basket, Scarcity Counter)
-- [ ] **CHAPTER 5E:** Alternating Scrollytelling Precision Sync (60 FPS & 3 Products)
-- [ ] **CHAPTER 5F:** Luxury E-Commerce Footer (Payment Gateways: bKash, Nagad, Visa, 0.00% Formalin Cert & Organic Dispatch)
+- [x] **CHAPTER 5D:** Carousel E-Commerce Integration (Interactive Qty, Direct Add-to-Basket, Scarcity Counter)
+- [x] **CHAPTER 5E:** Alternating Scrollytelling Precision Sync (60 FPS & 3 Products)
+- [x] **CHAPTER 5F:** Luxury E-Commerce Footer (Payment Gateways: bKash, Nagad, Visa, 0.00% Formalin Cert & Organic Dispatch)
 
 ---
 

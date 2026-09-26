@@ -5,7 +5,7 @@ const BigText = () => {
         {/* Purity Creed Badge */}
         <div className="mb-6">
           <span className="inline-block font-mono text-xs uppercase tracking-widest text-emerald-300 border border-emerald-500/30 bg-emerald-900/50 px-4 py-1.5 rounded-full shadow-sm">
-            THE PFO HARVEST PLEDGE
+            100% ORGANIC & CHEMICAL-FREE GUARANTEE
           </span>
         </div>
 
@@ -28,11 +28,11 @@ const BigText = () => {
 
         {/* Origin & Guarantee Meta */}
         <div className="mt-8 font-mono text-[11px] sm:text-xs text-stone-400 uppercase tracking-widest flex flex-wrap items-center justify-center gap-2 sm:gap-4">
-          <span>SOVEREIGN BENGAL HARVEST</span>
+          <span>DIRECT FROM CERTIFIED FARMS</span>
           <span className="text-amber-400">•</span>
           <span>0.00% SYNTHETIC RESIDUE</span>
           <span className="text-amber-400">•</span>
-          <span>COLD DISPATCH HUB</span>
+          <span>NATIONWIDE HOME DELIVERY</span>
         </div>
       </div>
     </section>

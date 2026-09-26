@@ -66,15 +66,15 @@ const Carousel = () => {
 
   // Dynamic stock scarcity per flavor
   const stockMeta = [
-    { lot: "LOT #089", stock: 14, tag: "Padma Basin Reserve" },
-    { lot: "LOT #014", stock: 9, tag: "Sundarban Deep Canopy" },
-    { lot: "LOT #402", stock: 22, tag: "Clay Oven Roasted" },
+    { lot: "RAJSHAHI ORCHARD", stock: 14, tag: "Tree-Ripened" },
+    { lot: "SUNDARBAN FOREST", stock: 9, tag: "100% Raw Wild" },
+    { lot: "ROASTED DRY NUTS", stock: 22, tag: "Zero Oil Added" },
   ];
 
   const currentMeta = stockMeta[currentFlavorIndex] || stockMeta[0];
 
   return (
-    <section id="reserves" className="carousel relative min-h-screen flex flex-col justify-between overflow-hidden bg-stone-950 py-12 md:py-16 text-white">
+    <section id="products" className="carousel relative min-h-screen flex flex-col justify-between overflow-hidden bg-stone-950 py-12 md:py-16 text-white">
       <div className="background pointer-events-none absolute inset-0 bg-[#E59000] opacity-60 transition-colors duration-1000"></div>
       <WavyCircles className="absolute left-1/2 top-1/2 h-[120vmin] -translate-x-1/2 -translate-y-1/2 text-[#E59000] transition-colors duration-1000" />
       
@@ -82,13 +82,13 @@ const Carousel = () => {
       <div className="relative text-center z-10 px-4">
         <div className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-amber-200 border border-amber-300/30 bg-black/30 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-sm">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>Lab-Certified Organic Reserves</span>
+          <span>Lab-Certified 100% Organic Products</span>
         </div>
         <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-serif font-bold tracking-tight">
-          Explore Our Heritage Reserves
+          Featured Organic Collection
         </h2>
         <p className="mt-1 font-mono text-xs text-stone-300 tracking-wider">
-          Rotate through our 3 flagship pure organic harvests
+          Explore our 3 bestselling pure organic products
         </p>
       </div>
 
@@ -155,7 +155,7 @@ const Carousel = () => {
             {flavors[currentFlavorIndex].description}
           </p>
 
-          {/* Interactive Quantity Selector & Add to Harvest Bag */}
+          {/* Interactive Quantity Selector & Add to Cart */}
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             {/* Quantity Controls */}
             <div className="flex items-center bg-black/50 backdrop-blur-md rounded-xl border border-white/20 px-2 py-1 shadow-lg">
@@ -176,12 +176,12 @@ const Carousel = () => {
               </button>
             </div>
 
-            {/* Direct Reserve Button */}
+            {/* Direct Add to Cart Button */}
             <button
               onClick={handleAddToCart}
-              className="px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-xl hover:shadow-amber-500/20 active:scale-95"
+              className="px-8 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-xl hover:shadow-amber-500/20 active:scale-95"
             >
-              RESERVE HARVEST BATCH
+              ADD TO CART
             </button>
           </div>
 

@@ -8,34 +8,34 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const products = [
   {
-    heading: "Royal Alphonso Mango",
-    subtitle: "100% Tree-Ripened • Zero Synthetic Ripeners",
-    hud: "ORIGIN: RAJSHAHI (LAT 24.37° N) • 19.2° BRIX SUCROSE • 0.00% FORMALIN",
-    body: "Harvested at sunrise from century-old heirloom orchards along the Padma basin. Naturally cured in authentic rice straw, delivering intense floral aroma and sweet, fiberless golden pulp untouched by calcium carbide.",
-    price: "৳1,450 / Heritage Wooden Crate",
+    heading: "Premium Rajshahi Mango",
+    subtitle: "100% Naturally Tree-Ripened • Zero Chemicals",
+    hud: "ORIGIN: RAJSHAHI • 19.2° BRIX SUCROSE • 0.00% FORMALIN TESTED",
+    body: "Freshly harvested from century-old orchards along the Padma basin. Naturally cured in authentic rice straw beds, delivering an exquisite sweet aroma and fiberless golden pulp untouched by calcium carbide.",
+    price: "৳1,450 / 10kg Fresh Crate",
     image: "/images/pfo_mango_crate.jpg",
-    alt: "PFO Sovereign Organic Mango Crate",
-    badge: "RESERVE LOT #089",
+    alt: "PFO Premium Rajshahi Mango Crate",
+    badge: "100% TREE-RIPENED",
   },
   {
     heading: "Sundarban Raw Wild Honey",
-    subtitle: "Unheated • 100% Bio-Active Mangrove Nectar",
-    hud: "ORIGIN: SUNDARBANS (LAT 21.94° N) • UNPASTEURIZED • WILD APIS DORSATA",
-    body: "Deep mangrove wild honey gathered directly from virgin tidal forest canopies by traditional Mouwals. Unheated, raw, and gravity-strained to preserve living royal enzymes, natural pollen, and antioxidant propolis.",
-    price: "৳1,200 / Artisanal Hex Jar (500g)",
+    subtitle: "100% Pure & Unheated • Bio-Active Mangrove Nectar",
+    hud: "ORIGIN: SUNDARBANS • UNPASTEURIZED • WILD APIS DORSATA NECTAR",
+    body: "Wild honeycomb nectar gathered directly from virgin tidal forest canopies by traditional Mouwals. Completely raw and gravity-filtered to preserve live beneficial enzymes, bee pollen, and natural propolis.",
+    price: "৳1,200 / 500g Artisanal Jar",
     image: "/images/pfo_sundarban_honey.jpg",
     alt: "PFO Sundarban Raw Wild Honey Jar",
-    badge: "BIO-ACTIVE RAW",
+    badge: "100% RAW & UNHEATED",
   },
   {
     heading: "Mountain Roasted Nuts & Seeds",
-    subtitle: "Slow Clay-Oven Roasted • Zero Preservatives",
-    hud: "HAND-ROASTED • 0% CHOLESTEROL • ZERO TRANS-FATS • BATCH #402",
-    body: "An artisanal symphony of whole California almonds, king cashews, walnuts, and sun-dried pumpkin seeds. Slow-baked in earthen clay ovens without a drop of industrial oil, imparting an authentic woody crispness.",
-    price: "৳980 / Amber Glass Canister (450g)",
+    subtitle: "Clay-Oven Roasted • Zero Added Oil or Preservatives",
+    hud: "HAND-ROASTED • 0% CHOLESTEROL • 100% NATURAL • FRESH BATCH",
+    body: "A handcrafted blend of whole premium almonds, jumbo cashews, walnuts, and sun-dried pumpkin seeds. Slow-baked in traditional earthen clay ovens without a single drop of oil, ensuring natural crunch and nutrients.",
+    price: "৳980 / 450g Glass Canister",
     image: "/images/pfo_mixed_nuts.jpg",
     alt: "PFO Mountain Roasted Nuts and Seeds Canister",
-    badge: "SLOW CLAY BAKED",
+    badge: "CLAY OVEN ROASTED",
   },
 ];
 
@@ -95,14 +95,14 @@ const AlternatingText = () => {
                         {item.price}
                       </span>
                       <span className="text-[11px] font-mono text-emerald-800 font-semibold">
-                        Free Express Dispatch • Tejgaon Hub
+                        Free Express Delivery • Dhaka & Nationwide
                       </span>
                     </div>
                     <a
-                      href="#reserves"
+                      href="#products"
                       className="px-5 py-2.5 rounded-xl bg-emerald-950 hover:bg-emerald-900 text-white font-mono text-xs font-bold tracking-wider uppercase transition-all shadow-md active:scale-95"
                     >
-                      RESERVE LOT →
+                      ORDER NOW →
                     </a>
                   </div>
                 </div>

@@ -7,7 +7,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState([
-    { id: 1, name: "Royal Alphonso Mango (Crate)", price: 1450, qty: 1, img: "/images/pfo_mango_crate.jpg" }
+    { id: 1, name: "Premium Rajshahi Mango (Crate)", price: 1450, qty: 1, img: "/images/pfo_mango_crate.jpg" }
   ]);
 
   // Lock body scroll when drawers are open
@@ -37,78 +37,82 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-4 sm:px-8 md:px-12 py-3.5 backdrop-blur-md bg-stone-50/80 border-b border-stone-200/70 transition-all duration-300">
-        {/* Brand Logo & Heritage Tagline */}
+      <header className="fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-4 sm:px-6 md:px-10 py-3 backdrop-blur-md bg-stone-50/90 border-b border-stone-200/80 shadow-sm transition-all duration-300">
+        {/* Official Brand Logo & Tagline */}
         <a href="/" className="flex items-center gap-3 group">
-          <div className="flex flex-col">
-            <span className="font-serif text-2xl sm:text-3xl font-black tracking-tight text-emerald-950 group-hover:text-amber-800 transition-colors">
-              PFO
-            </span>
-            <span className="font-mono text-[8px] tracking-[0.25em] text-emerald-800 uppercase font-bold -mt-1">
-              EST. 1924
-            </span>
+          <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden border border-emerald-800/40 shadow-sm group-hover:scale-105 transition-transform">
+            <Image
+              src="/images/pfo_logo.jpg"
+              alt="PFO Farm Logo"
+              fill
+              sizes="48px"
+              className="object-cover"
+              priority
+            />
           </div>
-          <span className="hidden lg:inline-block h-6 w-[1px] bg-stone-300"></span>
-          <div className="hidden lg:flex flex-col text-left font-mono">
-            <span className="text-[10px] tracking-wider text-stone-800 uppercase font-bold">
-              Pure Fresh Organic
+          <div className="flex flex-col text-left">
+            <span className="font-serif text-xl sm:text-2xl font-black tracking-tight text-emerald-950 group-hover:text-amber-700 transition-colors leading-none">
+              PFO FARM
             </span>
-            <span className="text-[9px] tracking-widest text-emerald-800">
-              Rajshahi & Sundarban Reserve
+            <span className="font-mono text-[9px] sm:text-[10px] tracking-wider text-emerald-800 font-semibold mt-0.5">
+              Pure, Fresh & Organic
             </span>
           </div>
         </a>
 
-        {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-8 font-mono text-xs tracking-wider text-stone-800 font-semibold">
-          <a href="#reserves" className="hover:text-amber-700 transition-colors uppercase">
-            Reserves
+        {/* Desktop E-Commerce Navigation Links */}
+        <nav className="hidden lg:flex items-center gap-7 font-mono text-xs tracking-wider text-stone-800 font-bold">
+          <a href="#products" className="hover:text-emerald-800 transition-colors">
+            ALL PRODUCTS
           </a>
-          <a href="#heritage" className="hover:text-amber-700 transition-colors uppercase">
-            Heritage
+          <a href="#fruits" className="hover:text-emerald-800 transition-colors">
+            FRESH FRUITS
           </a>
-          <a href="#guarantee" className="hover:text-amber-700 transition-colors uppercase">
-            0.00% Formalin
+          <a href="#honey" className="hover:text-emerald-800 transition-colors">
+            RAW HONEY
           </a>
-          <a href="#contact" className="hover:text-amber-700 transition-colors uppercase">
-            Farm Dispatch
+          <a href="#guarantee" className="hover:text-emerald-800 transition-colors">
+            0% FORMALIN TEST
+          </a>
+          <a href="#contact" className="hover:text-emerald-800 transition-colors">
+            CUSTOMER CARE
           </a>
         </nav>
 
-        {/* Actions: Currency, Cart, and Order CTA */}
+        {/* Actions: Currency, Cart Drawer Trigger, and Order CTA */}
         <div className="flex items-center gap-3 sm:gap-4">
           {/* Currency Indicator */}
-          <span className="hidden sm:inline-flex items-center font-mono text-xs font-bold px-2.5 py-1 rounded-md bg-stone-200/70 text-stone-700 border border-stone-300/80">
+          <span className="hidden sm:inline-flex items-center font-mono text-xs font-bold px-2.5 py-1 rounded-md bg-stone-200/80 text-stone-700 border border-stone-300/80">
             ৳ BDT
           </span>
 
           {/* Cart Bag Trigger */}
           <button
             onClick={() => setIsCartOpen(true)}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 border border-stone-300 shadow-sm hover:border-amber-600 transition-all font-mono text-xs font-bold text-stone-900"
+            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-stone-300 shadow-sm hover:border-emerald-700 transition-all font-mono text-xs font-bold text-stone-900"
             aria-label="View Shopping Basket"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-emerald-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
             </svg>
-            <span>Bag</span>
-            <span className="w-4 h-4 rounded-full bg-amber-500 text-stone-900 text-[10px] flex items-center justify-center font-black">
+            <span>Cart</span>
+            <span className="w-4 h-4 rounded-full bg-amber-500 text-stone-950 text-[10px] flex items-center justify-center font-black">
               {cartItems.reduce((acc, i) => acc + i.qty, 0)}
             </span>
           </button>
 
           {/* Order CTA (Desktop) */}
           <a
-            href="#reserves"
-            className="hidden sm:inline-block px-4 py-2 rounded-full bg-emerald-950 text-white font-mono text-xs font-bold tracking-wider hover:bg-emerald-900 transition-all shadow-md hover:shadow-lg"
+            href="#products"
+            className="hidden sm:inline-block px-4 py-2 rounded-full bg-emerald-950 text-white font-mono text-xs font-bold tracking-wider hover:bg-emerald-900 transition-all shadow-md hover:shadow-lg active:scale-95"
           >
-            ORDER HARVEST
+            ORDER NOW
           </a>
 
           {/* Mobile Hamburger Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-stone-800 hover:bg-stone-200/60 transition-colors"
+            className="lg:hidden p-2 rounded-lg text-stone-800 hover:bg-stone-200/60 transition-colors"
             aria-label="Toggle Mobile Navigation Menu"
           >
             <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -135,9 +139,14 @@ const Header = () => {
           <aside className="relative z-10 w-full max-w-md bg-stone-50 h-full shadow-2xl flex flex-col justify-between border-l border-stone-200 p-6 overflow-y-auto">
             <div>
               <div className="flex items-center justify-between border-b border-stone-200 pb-4">
-                <div>
-                  <h3 className="font-serif text-2xl font-bold text-stone-900">Your Harvest Bag</h3>
-                  <p className="font-mono text-xs text-emerald-800">Fresh Dispatch from Rajshahi Orchards</p>
+                <div className="flex items-center gap-3">
+                  <div className="relative w-8 h-8 rounded-full overflow-hidden border border-emerald-800">
+                    <Image src="/images/pfo_logo.jpg" alt="PFO Logo" fill className="object-cover" />
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-2xl font-bold text-stone-900 leading-none">Your Shopping Cart</h3>
+                    <p className="font-mono text-xs text-emerald-800 mt-0.5">Fresh Farm Direct Dispatch</p>
+                  </div>
                 </div>
                 <button
                   onClick={() => setIsCartOpen(false)}
@@ -151,8 +160,8 @@ const Header = () => {
               <div className="mt-6 space-y-4">
                 {cartItems.length === 0 ? (
                   <div className="text-center py-12">
-                    <p className="font-mono text-sm text-stone-500">Your bag is currently empty.</p>
-                    <p className="text-xs text-stone-400 mt-1">Select from our 3 pure reserves below.</p>
+                    <p className="font-mono text-sm text-stone-500">Your cart is currently empty.</p>
+                    <p className="text-xs text-stone-400 mt-1">Select from our fresh organic products below.</p>
                   </div>
                 ) : (
                   cartItems.map((item) => (
@@ -176,7 +185,7 @@ const Header = () => {
               {/* Quick Add Presets */}
               <div className="mt-8 border-t border-stone-200 pt-6">
                 <h4 className="font-mono text-xs uppercase tracking-widest text-stone-500 font-bold mb-3">
-                  Quick Add Reserves:
+                  Quick Add Products:
                 </h4>
                 <div className="space-y-2">
                   <button
@@ -204,13 +213,13 @@ const Header = () => {
                 <span className="text-xl font-bold text-stone-900">৳{subtotal.toLocaleString()}</span>
               </div>
               <button
-                onClick={() => alert(`Harvest Order Confirmed for ৳${subtotal.toLocaleString()}! We will contact you for delivery details.`)}
-                className="w-full py-3.5 rounded-xl bg-emerald-950 text-white font-mono text-xs font-bold tracking-widest uppercase hover:bg-emerald-900 transition-colors shadow-lg"
+                onClick={() => alert(`Order Confirmed for ৳${subtotal.toLocaleString()}! PFO Farm team will contact you for delivery details.`)}
+                className="w-full py-3.5 rounded-xl bg-emerald-950 text-white font-mono text-xs font-bold tracking-widest uppercase hover:bg-emerald-900 transition-colors shadow-lg active:scale-98"
               >
-                SECURE CHECKOUT • ৳{subtotal.toLocaleString()}
+                PROCEED TO CHECKOUT • ৳{subtotal.toLocaleString()}
               </button>
               <p className="text-[10px] text-center font-mono text-stone-400 mt-2">
-                100% Organic Delivery Guarantee • Zero Formalin
+                Cash on Delivery Available • 100% Money-Back Guarantee
               </p>
             </div>
           </aside>
@@ -219,32 +228,40 @@ const Header = () => {
 
       {/* Mobile Drawer Menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-[110] bg-stone-950/95 text-stone-100 backdrop-blur-xl flex flex-col justify-between p-8 md:hidden">
+        <div className="fixed inset-0 z-[110] bg-stone-950/95 text-stone-100 backdrop-blur-xl flex flex-col justify-between p-8 lg:hidden">
           <div>
             <div className="flex items-center justify-between border-b border-white/10 pb-6">
-              <span className="font-serif text-3xl font-bold text-amber-400">PFO ORGANIC</span>
+              <div className="flex items-center gap-3">
+                <div className="relative w-10 h-10 rounded-full overflow-hidden border border-amber-400">
+                  <Image src="/images/pfo_logo.jpg" alt="PFO Logo" fill className="object-cover" />
+                </div>
+                <span className="font-serif text-2xl font-bold text-amber-400">PFO FARM</span>
+              </div>
               <button onClick={() => setIsMobileMenuOpen(false)} className="text-2xl p-2 text-stone-400">✕</button>
             </div>
             <nav className="mt-8 flex flex-col gap-6 font-serif text-2xl font-bold">
-              <a href="#reserves" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-amber-400 transition-colors">
-                Our Reserves
+              <a href="#products" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-amber-400 transition-colors">
+                All Products
               </a>
-              <a href="#heritage" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-amber-400 transition-colors">
-                Heritage Orchards
+              <a href="#fruits" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-amber-400 transition-colors">
+                Fresh Fruits
+              </a>
+              <a href="#honey" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-amber-400 transition-colors">
+                Raw Honey
               </a>
               <a href="#guarantee" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-amber-400 transition-colors">
-                Formalin 0.00% Cert
+                0% Formalin Test
               </a>
               <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-amber-400 transition-colors">
-                Farm Dispatch
+                Customer Care & Delivery
               </a>
             </nav>
           </div>
 
           <div className="font-mono text-xs border-t border-white/10 pt-6">
-            <p className="text-stone-400">Direct Hotline & WhatsApp:</p>
+            <p className="text-stone-400">Customer Care Hotline & WhatsApp:</p>
             <p className="text-amber-300 font-bold text-sm mt-1">+880 1700-000000</p>
-            <p className="text-[11px] text-stone-500 mt-3">Rajshahi • Sundarban • Dhaka Dispatch</p>
+            <p className="text-[11px] text-stone-500 mt-2">Daily Dispatch: Rajshahi • Sundarbans • Dhaka</p>
           </div>
         </div>
       )}

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -9,24 +9,30 @@ const Footer = () => {
         {/* Top Section: 4-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 pb-14 border-b border-stone-800">
           
-          {/* Column 1: Brand Story & Mission */}
+          {/* Column 1: Official Logo & Brand Story */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-emerald-900/60 border border-amber-400/40 flex items-center justify-center font-serif text-amber-400 text-xl font-bold">
-                P
+            <div className="flex items-center gap-3.5">
+              <div className="relative w-12 h-12 rounded-full overflow-hidden border border-emerald-700 shadow-md">
+                <Image
+                  src="/images/pfo_logo.jpg"
+                  alt="PFO Farm Logo"
+                  fill
+                  sizes="48px"
+                  className="object-cover"
+                />
               </div>
               <div>
-                <span className="font-serif text-2xl font-bold tracking-tight text-stone-100">
-                  PFO ORGANIC
+                <span className="font-serif text-2xl font-black tracking-tight text-stone-100 block leading-none">
+                  PFO FARM
                 </span>
-                <p className="font-mono text-[9px] uppercase tracking-widest text-emerald-400 -mt-1 font-bold">
-                  Pure Fresh Organic • Est. 2024
+                <p className="font-mono text-[9px] uppercase tracking-widest text-emerald-400 mt-1 font-bold">
+                  Pure, Fresh & Organic
                 </p>
               </div>
             </div>
 
             <p className="font-sans text-xs text-stone-400 leading-relaxed pr-2">
-              Bangladesh&apos;s sovereign organic harvest reserve. Delivering tree-ripened Rajshahi mangoes, wild bio-active Sundarban honey, and clay-oven roasted nuts untouched by industrial chemicals.
+              Bangladesh&apos;s trusted organic farm collective. Delivering tree-ripened Rajshahi mangoes, wild bio-active Sundarban honey, and fresh roasted nuts untouched by industrial chemicals directly to your home.
             </p>
 
             <div className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-wider text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-3 py-1.5 rounded-full">
@@ -35,33 +41,33 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 2: Sovereign Reserves */}
+          {/* Column 2: Our Fresh Farm Products */}
           <div className="space-y-3">
             <h4 className="font-serif text-lg font-bold text-amber-300 tracking-wide">
-              Heritage Reserves
+              Our Products
             </h4>
             <ul className="space-y-2 font-mono text-xs text-stone-400">
               <li>
-                <a href="#reserves" className="hover:text-amber-300 transition-colors flex items-center justify-between">
-                  <span>Royal Alphonso Mango (Lot #089)</span>
-                  <span className="text-[10px] text-amber-500/80">৳1,450</span>
+                <a href="#products" className="hover:text-amber-300 transition-colors flex items-center justify-between">
+                  <span>Premium Rajshahi Mango (Crate)</span>
+                  <span className="text-[10px] text-amber-500 font-bold">৳1,450</span>
                 </a>
               </li>
               <li>
-                <a href="#reserves" className="hover:text-amber-300 transition-colors flex items-center justify-between">
+                <a href="#products" className="hover:text-amber-300 transition-colors flex items-center justify-between">
                   <span>Sundarban Raw Wild Honey (500g)</span>
-                  <span className="text-[10px] text-amber-500/80">৳1,200</span>
+                  <span className="text-[10px] text-amber-500 font-bold">৳1,200</span>
                 </a>
               </li>
               <li>
-                <a href="#reserves" className="hover:text-amber-300 transition-colors flex items-center justify-between">
+                <a href="#products" className="hover:text-amber-300 transition-colors flex items-center justify-between">
                   <span>Mountain Roasted Nuts (450g)</span>
-                  <span className="text-[10px] text-amber-500/80">৳980</span>
+                  <span className="text-[10px] text-amber-500 font-bold">৳980</span>
                 </a>
               </li>
               <li className="pt-2 border-t border-stone-800/80">
-                <a href="#guarantee" className="text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1.5">
-                  <span>↓ Download Lab Purity Certificate</span>
+                <a href="#guarantee" className="text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1.5 font-bold">
+                  <span>↓ Download 0% Formalin Lab Report</span>
                 </a>
               </li>
             </ul>
@@ -70,7 +76,7 @@ const Footer = () => {
           {/* Column 3: Quality Guarantees */}
           <div className="space-y-3">
             <h4 className="font-serif text-lg font-bold text-amber-300 tracking-wide">
-              Harvest Guarantees
+              Quality Guarantees
             </h4>
             <ul className="space-y-2.5 font-sans text-xs text-stone-400">
               <li className="flex items-start gap-2">
@@ -83,20 +89,20 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-emerald-400 font-bold">✓</span>
-                <span><strong>Cold-Chain Express:</strong> Dispatched from cold storage directly to Dhaka within 24 hours.</span>
+                <span><strong>Express Delivery:</strong> Temperature-controlled dispatch to Dhaka & nationwide within 24h.</span>
               </li>
             </ul>
           </div>
 
-          {/* Column 4: Orchard Dispatch & Concierge */}
+          {/* Column 4: Customer Support & Hotline */}
           <div className="space-y-3">
             <h4 className="font-serif text-lg font-bold text-amber-300 tracking-wide">
-              Farm Dispatch Hub
+              Customer Support
             </h4>
             <div className="font-mono text-xs text-stone-400 space-y-1.5">
-              <p className="text-stone-300 font-semibold">Direct Concierge Hotline:</p>
+              <p className="text-stone-300 font-semibold">Direct Customer Care Hotline:</p>
               <p className="text-amber-400 font-bold text-sm">+880 1700-000000</p>
-              <p className="text-stone-400">WhatsApp Dispatch Support: 24/7</p>
+              <p className="text-stone-400">WhatsApp Order Support: 24/7</p>
               <p className="text-[11px] text-stone-500 pt-1">
                 Central Cold Hub: Plot 42, Tejgaon Industrial Area, Dhaka 1208
               </p>
@@ -105,7 +111,7 @@ const Footer = () => {
             {/* VIP Harvest Drop Signup */}
             <div className="pt-3">
               <label htmlFor="harvest-email" className="font-mono text-[10px] uppercase tracking-wider text-stone-400 block mb-1.5">
-                Join VIP Harvest Drop Alerts:
+                Get Fresh Arrival Alerts:
               </label>
               <div className="flex gap-2">
                 <input
@@ -115,8 +121,8 @@ const Footer = () => {
                   className="bg-stone-900 border border-stone-800 rounded-lg px-3 py-1.5 text-xs text-stone-200 placeholder:text-stone-600 focus:outline-none focus:border-amber-400 w-full font-mono"
                 />
                 <button
-                  onClick={() => alert("Thank you! You are on the VIP Harvest Priority Registry.")}
-                  className="bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono text-xs font-bold px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap"
+                  onClick={() => alert("Thank you! You are now subscribed to PFO Farm Fresh arrival alerts.")}
+                  className="bg-amber-500 hover:bg-amber-400 text-stone-950 font-mono text-xs font-bold px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap active:scale-95"
                 >
                   JOIN
                 </button>
@@ -139,17 +145,17 @@ const Footer = () => {
           </div>
 
           <div className="font-mono text-xs text-stone-500 text-center md:text-right">
-            <span>ORCHARD ORIGIN: RAJSHAHI LAT 24.37° N • SUNDARBANS LAT 21.94° N</span>
+            <span>FARM ORIGIN: RAJSHAHI & SUNDARBANS • DHAKA DISPATCH</span>
           </div>
         </div>
 
         {/* Bottom Section: Copyright & Disclaimer */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[11px] text-stone-500">
-          <p>© 2026 PFO (Pure Fresh Organic) Bangladesh. All Sovereign Harvest Rights Reserved.</p>
+          <p>© 2026 PFO Farm (Pure, Fresh & Organic) Bangladesh. All Rights Reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-amber-400 transition-colors">Purity Manifesto</a>
+            <a href="#" className="hover:text-amber-400 transition-colors">Quality Guarantee</a>
             <a href="#" className="hover:text-amber-400 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-amber-400 transition-colors">Terms of Dispatch</a>
+            <a href="#" className="hover:text-amber-400 transition-colors">Terms of Delivery</a>
           </div>
         </div>
       </div>

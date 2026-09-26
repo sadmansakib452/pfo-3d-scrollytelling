@@ -110,40 +110,40 @@ const Hero = () => {
               />
             </h1>
             <div className="hero-subheading mt-8 text-4xl sm:text-5xl font-serif font-bold text-emerald-950 lg:text-6xl">
-              The Sovereign Harvest
+              100% Pure, Fresh & Organic
             </div>
             <div className="hero-body text-base sm:text-xl font-mono text-emerald-900 mt-4">
-              100% Tree-Ripened • Zero Synthetic Chemicals • 0.00% Formalin
+              Naturally Tree-Ripened • Zero Chemicals • 0.00% Formalin Tested
             </div>
             <Button
-              buttonLink="#reserves"
-              buttonText="EXPLORE RESERVES"
+              buttonLink="#products"
+              buttonText="SHOP FRESH PRODUCTS"
               className="hero-button mt-8 bg-emerald-800 text-white hover:bg-emerald-900 shadow-xl"
             />
 
             {/* 3 Real Product Badges with actual photos */}
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-              <a href="#reserves" className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white/70 backdrop-blur-md border border-amber-900/10 shadow-md hover:scale-105 transition-transform">
-                <Image src="/images/pfo_mango_crate.jpg" alt="Alphonso Mango" width={40} height={40} className="w-10 h-10 rounded-lg object-cover" />
+              <a href="#fruits" className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white/70 backdrop-blur-md border border-amber-900/10 shadow-md hover:scale-105 transition-transform">
+                <Image src="/images/pfo_mango_crate.jpg" alt="Rajshahi Mango" width={40} height={40} className="w-10 h-10 rounded-lg object-cover" />
                 <div className="text-left font-mono">
-                  <p className="text-xs font-bold text-stone-900">Alphonso Mango</p>
-                  <p className="text-[10px] text-amber-800 font-semibold">Rajshahi • 19.2° Brix</p>
+                  <p className="text-xs font-bold text-stone-900">Rajshahi Mango</p>
+                  <p className="text-[10px] text-amber-800 font-semibold">Tree-Ripened • 19.2° Brix</p>
                 </div>
               </a>
 
-              <a href="#reserves" className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white/70 backdrop-blur-md border border-amber-900/10 shadow-md hover:scale-105 transition-transform">
+              <a href="#honey" className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white/70 backdrop-blur-md border border-amber-900/10 shadow-md hover:scale-105 transition-transform">
                 <Image src="/images/pfo_sundarban_honey.jpg" alt="Sundarban Honey" width={40} height={40} className="w-10 h-10 rounded-lg object-cover" />
                 <div className="text-left font-mono">
                   <p className="text-xs font-bold text-stone-900">Sundarban Honey</p>
-                  <p className="text-[10px] text-amber-800 font-semibold">Raw • Bio-Active</p>
+                  <p className="text-[10px] text-amber-800 font-semibold">100% Raw • Bio-Active</p>
                 </div>
               </a>
 
-              <a href="#reserves" className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white/70 backdrop-blur-md border border-amber-900/10 shadow-md hover:scale-105 transition-transform">
+              <a href="#products" className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white/70 backdrop-blur-md border border-amber-900/10 shadow-md hover:scale-105 transition-transform">
                 <Image src="/images/pfo_mixed_nuts.jpg" alt="Mountain Nuts" width={40} height={40} className="w-10 h-10 rounded-lg object-cover" />
                 <div className="text-left font-mono">
-                  <p className="text-xs font-bold text-stone-900">Mountain Nuts</p>
-                  <p className="text-[10px] text-amber-800 font-semibold">Clay Oven Roasted</p>
+                  <p className="text-xs font-bold text-stone-900">Roasted Nuts</p>
+                  <p className="text-[10px] text-amber-800 font-semibold">Clay Oven Baked</p>
                 </div>
               </a>
             </div>
@@ -154,7 +154,7 @@ const Hero = () => {
           <div className="overflow-hidden rounded-3xl shadow-2xl border border-amber-900/15 bg-white/40 p-2">
             <Image
               src="/images/pfo_mango_crate.jpg"
-              alt="PFO Sovereign Organic Mango Crate"
+              alt="PFO Premium Rajshahi Mango Crate"
               width={700}
               height={700}
               className="w-full h-[360px] md:h-[460px] object-cover rounded-2xl hover:scale-105 transition-transform duration-700"
@@ -163,12 +163,12 @@ const Hero = () => {
           <div className="max-w-xl">
             <div className="flex items-center gap-3 font-mono text-xs tracking-widest text-emerald-900 uppercase mb-3">
               <span className="px-3 py-1 rounded-full bg-emerald-100 font-bold border border-emerald-300">
-                HARVEST LOT #089
+                100% FARM FRESH
               </span>
               <span className="opacity-75">RAJSHAHI & SUNDARBAN</span>
             </div>
             <h2 className="text-side-heading text-balance text-4xl sm:text-5xl lg:text-7xl font-serif font-black text-stone-900 mt-2 leading-[0.95]">
-              <TextSplitter text="Three Pure Reserves" />
+              <TextSplitter text="Our Fresh Farm Products" />
             </h2>
             <div className="text-side-body mt-6 max-w-lg text-stone-700 text-lg md:text-xl font-sans leading-relaxed">
               From certified heritage orchards in Rajshahi to the virgin mangrove canopies of the Sundarbans. 100% lab-verified organic integrity, zero formalin, zero synthetic ripeners, and natural bio-active goodness delivered directly to your doorstep.

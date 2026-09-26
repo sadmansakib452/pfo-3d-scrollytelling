@@ -89,13 +89,21 @@ const AlternatingText = () => {
                     <p>{item.body}</p>
                   </div>
 
-                  <div className="mt-6 flex items-center justify-between border-t border-stone-300/80 pt-4">
-                    <span className="font-mono text-2xl font-bold text-amber-900">
-                      {item.price}
-                    </span>
-                    <span className="text-xs uppercase font-mono tracking-wider text-stone-600 bg-stone-200/60 px-3 py-1 rounded-md">
-                      Farm Direct
-                    </span>
+                  <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-stone-300/80 pt-4">
+                    <div>
+                      <span className="font-mono text-2xl font-bold text-amber-900 block">
+                        {item.price}
+                      </span>
+                      <span className="text-[11px] font-mono text-emerald-800 font-semibold">
+                        Free Express Dispatch • Tejgaon Hub
+                      </span>
+                    </div>
+                    <a
+                      href="#reserves"
+                      className="px-5 py-2.5 rounded-xl bg-emerald-950 hover:bg-emerald-900 text-white font-mono text-xs font-bold tracking-wider uppercase transition-all shadow-md active:scale-95"
+                    >
+                      RESERVE LOT →
+                    </a>
                   </div>
                 </div>
 

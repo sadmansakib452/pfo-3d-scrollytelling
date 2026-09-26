@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Center, Environment, View } from "@react-three/drei";
 import { useRef, useState } from "react";
 import { flavors } from "@/data/data";
@@ -112,6 +113,21 @@ const Carousel = () => {
           <p className="mt-2 text-xs md:text-sm text-stone-100 font-sans leading-relaxed max-w-lg mx-auto opacity-95">
             {flavors[currentFlavorIndex].description}
           </p>
+          <div className="mt-4 flex items-center justify-center gap-3">
+            <div className="w-12 h-12 overflow-hidden rounded-xl border border-white/40 shadow-lg">
+              <Image
+                src={flavors[currentFlavorIndex].image}
+                alt={flavors[currentFlavorIndex].name}
+                width={64}
+                height={64}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="text-left font-mono">
+              <p className="text-xs uppercase tracking-wider text-amber-200 font-semibold">100% Organic Certified</p>
+              <p className="text-[10px] text-white/80">Direct Farm Dispatch</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

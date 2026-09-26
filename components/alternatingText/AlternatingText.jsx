@@ -52,62 +52,79 @@ const AlternatingText = () => {
             </View>
           )}
 
-          {products.map((item, index) => (
-            <div
-              key={item.heading}
-              className="alternating-section grid min-h-[85vh] md:h-screen place-items-center gap-x-12 md:grid-cols-2 py-12"
-            >
+          {products.map((item, index) => {
+            const isTextLeft = index % 2 === 0;
+            return (
               <div
-                className={`z-10 max-w-xl ${
-                  !isDesktop
-                    ? "col-start-1"
-                    : index % 2 === 0
-                      ? "col-start-1"
-                      : "col-start-2"
-                }`}
+                key={item.heading}
+                className="alternating-section grid min-h-[90vh] md:h-screen items-center gap-8 md:gap-16 md:grid-cols-2 py-16 px-4 md:px-12"
               >
-                {/* Mobile & Tablet Product Visual Preview */}
-                <div className="mb-6 overflow-hidden rounded-2xl shadow-xl md:hidden">
-                  <Image
-                    src={item.image}
-                    alt={item.alt}
-                    width={600}
-                    height={400}
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
-                  />
+                {/* Text Content Column */}
+                <div
+                  className={`z-10 max-w-xl ${
+                    !isDesktop
+                      ? "order-2"
+                      : isTextLeft
+                        ? "md:col-start-1 md:order-1"
+                        : "md:col-start-2 md:order-2"
+                  }`}
+                >
+                  {/* Laboratory / Origin HUD Metadata */}
+                  <div className="flex items-center gap-3 font-mono text-xs tracking-widest text-emerald-800 uppercase mb-3">
+                    <span className="px-3 py-1 rounded-full bg-emerald-100 font-bold border border-emerald-300">
+                      {item.badge}
+                    </span>
+                    <span className="hidden sm:inline opacity-80">{item.hud}</span>
+                  </div>
+
+                  <h2 className="text-balance text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-stone-900 tracking-tight">
+                    {item.heading}
+                  </h2>
+
+                  <div className="mt-2 text-emerald-900 font-semibold text-lg sm:text-xl">
+                    {item.subtitle}
+                  </div>
+
+                  <div className="mt-4 text-stone-700 text-base sm:text-lg leading-relaxed font-sans">
+                    <p>{item.body}</p>
+                  </div>
+
+                  <div className="mt-6 flex items-center justify-between border-t border-stone-300/80 pt-4">
+                    <span className="font-mono text-2xl font-bold text-amber-900">
+                      {item.price}
+                    </span>
+                    <span className="text-xs uppercase font-mono tracking-wider text-stone-600 bg-stone-200/60 px-3 py-1 rounded-md">
+                      Farm Direct
+                    </span>
+                  </div>
                 </div>
 
-                {/* Laboratory / Origin HUD Metadata */}
-                <div className="flex items-center gap-3 font-mono text-xs tracking-widest text-emerald-800 uppercase mb-2">
-                  <span className="px-2.5 py-0.5 rounded-full bg-emerald-100 font-semibold border border-emerald-300">
-                    {item.badge}
-                  </span>
-                  <span className="hidden sm:inline opacity-75">{item.hud}</span>
-                </div>
-
-                <h2 className="text-balance text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-stone-900 tracking-tight">
-                  {item.heading}
-                </h2>
-
-                <div className="mt-2 text-emerald-900 font-medium text-lg">
-                  {item.subtitle}
-                </div>
-
-                <div className="mt-4 text-stone-700 text-base sm:text-lg leading-relaxed font-sans">
-                  <p>{item.body}</p>
-                </div>
-
-                <div className="mt-6 flex items-center justify-between border-t border-stone-300/60 pt-4">
-                  <span className="font-mono text-xl font-bold text-amber-900">
-                    {item.price}
-                  </span>
-                  <span className="text-xs uppercase font-mono tracking-wider text-stone-500">
-                    Direct Farm Dispatch
-                  </span>
+                {/* Studio-Grade Product Photography Column (Desktop & Mobile) */}
+                <div
+                  className={`z-10 ${
+                    !isDesktop
+                      ? "order-1"
+                      : isTextLeft
+                        ? "md:col-start-2 md:order-2"
+                        : "md:col-start-1 md:order-1"
+                  }`}
+                >
+                  <div className="group relative overflow-hidden rounded-3xl shadow-2xl border border-amber-900/15 bg-white/40 backdrop-blur-sm p-2 transition-transform duration-700 hover:scale-[1.02]">
+                    <Image
+                      src={item.image}
+                      alt={item.alt}
+                      width={700}
+                      height={500}
+                      className="w-full h-[320px] sm:h-[400px] md:h-[460px] object-cover rounded-2xl group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute bottom-6 left-6 font-mono text-xs uppercase tracking-widest text-white bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/20">
+                      {item.badge} • 100% ORGANIC
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </Bounded>

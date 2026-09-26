@@ -66,10 +66,10 @@ const Hero = () => {
         .fromTo(
           "body",
           {
-            backgroundColor: "#FDE047",
+            backgroundColor: "#FAF5EB",
           },
           {
-            backgroundColor: "#D9F99D",
+            backgroundColor: "#FEF3C7",
             overwrite: "auto",
           },
           1
@@ -96,47 +96,79 @@ const Hero = () => {
       {isDesktop && (
         <View className="hero-scene pointer-events-none sticky top-0 z-50 -mt-[100vh] hidden h-screen w-screen md:block">
           <HeroScene />
-          <Bubbles count={300} speed={2} opacity={0.3} />
+          <Bubbles count={120} speed={1.5} opacity={0.25} />
         </View>
       )}
       <div className="grid">
         <div className="grid h-screen place-items-center">
-          <div className="grid auto-rows-min place-items-center text-center">
-            <h1 className="hero-header text-7xl font-black uppercase leading-[.8] text-amber-600 md:text-[9rem] lg:text-[13rem]">
+          <div className="grid auto-rows-min place-items-center text-center max-w-4xl z-10 px-4">
+            <h1 className="hero-header text-6xl font-black uppercase leading-[.85] text-amber-600 md:text-[8rem] lg:text-[11rem]">
               <TextSplitter
                 text="PURE FRESH"
                 wordDisplayStyle="block"
                 className="hero-header-word"
               />
             </h1>
-            <div className="hero-subheading mt-12 text-5xl font-semibold text-emerald-950 lg:text-6xl">
+            <div className="hero-subheading mt-8 text-4xl sm:text-5xl font-serif font-bold text-emerald-950 lg:text-6xl">
               The Sovereign Harvest
             </div>
-            <div className="hero-body text-xl md:text-2xl font-mono text-emerald-900 mt-4">
+            <div className="hero-body text-base sm:text-xl font-mono text-emerald-900 mt-4">
               100% Tree-Ripened • Zero Synthetic Chemicals • 0.00% Formalin
             </div>
             <Button
               buttonLink="#reserves"
               buttonText="EXPLORE RESERVES"
-              className="hero-button mt-12 bg-emerald-800 text-white hover:bg-emerald-900"
+              className="hero-button mt-8 bg-emerald-800 text-white hover:bg-emerald-900 shadow-xl"
             />
+
+            {/* 3 Real Product Badges with actual photos */}
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+              <a href="#reserves" className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white/70 backdrop-blur-md border border-amber-900/10 shadow-md hover:scale-105 transition-transform">
+                <Image src="/images/pfo_mango_crate.jpg" alt="Alphonso Mango" width={40} height={40} className="w-10 h-10 rounded-lg object-cover" />
+                <div className="text-left font-mono">
+                  <p className="text-xs font-bold text-stone-900">Alphonso Mango</p>
+                  <p className="text-[10px] text-amber-800 font-semibold">Rajshahi • 19.2° Brix</p>
+                </div>
+              </a>
+
+              <a href="#reserves" className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white/70 backdrop-blur-md border border-amber-900/10 shadow-md hover:scale-105 transition-transform">
+                <Image src="/images/pfo_sundarban_honey.jpg" alt="Sundarban Honey" width={40} height={40} className="w-10 h-10 rounded-lg object-cover" />
+                <div className="text-left font-mono">
+                  <p className="text-xs font-bold text-stone-900">Sundarban Honey</p>
+                  <p className="text-[10px] text-amber-800 font-semibold">Raw • Bio-Active</p>
+                </div>
+              </a>
+
+              <a href="#reserves" className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white/70 backdrop-blur-md border border-amber-900/10 shadow-md hover:scale-105 transition-transform">
+                <Image src="/images/pfo_mixed_nuts.jpg" alt="Mountain Nuts" width={40} height={40} className="w-10 h-10 rounded-lg object-cover" />
+                <div className="text-left font-mono">
+                  <p className="text-xs font-bold text-stone-900">Mountain Nuts</p>
+                  <p className="text-[10px] text-amber-800 font-semibold">Clay Oven Roasted</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="text-side relative z-[80] grid h-screen items-center gap-4 md:grid-cols-2">
-          <Image
-            src="/images/pfo_mango_crate.jpg"
-            alt="PFO Sovereign Organic Mango Crate"
-            width={600}
-            height={600}
-            className="w-full rounded-2xl shadow-2xl object-cover max-h-[450px] md:hidden"
-          />
+        <div className="text-side relative z-[80] grid min-h-screen items-center gap-8 md:grid-cols-2 py-16 px-4">
+          <div className="overflow-hidden rounded-3xl shadow-2xl border border-amber-900/15">
+            <Image
+              src="/images/pfo_mango_crate.jpg"
+              alt="PFO Sovereign Organic Mango Crate"
+              width={700}
+              height={700}
+              className="w-full h-[380px] md:h-[480px] object-cover hover:scale-105 transition-transform duration-700"
+            />
+          </div>
           <div>
-            <h2 className="text-side-heading text-balance text-6xl font-bold uppercase text-emerald-950 lg:text-8xl">
+            <span className="font-mono text-xs tracking-widest text-emerald-800 uppercase px-3 py-1 rounded-full bg-emerald-100 border border-emerald-300">
+              HARVEST LOT #089
+            </span>
+            <h2 className="text-side-heading text-balance text-4xl sm:text-5xl lg:text-7xl font-serif font-bold text-emerald-950 mt-4 leading-tight">
               <TextSplitter text="Three Pure Reserves" />
             </h2>
-            <div className="text-side-body mt-4 max-w-xl text-balance text-xl font-normal text-emerald-900">
-              From certified heritage orchards in Rajshahi to the virgin mangrove forests of the Sundarbans. 100% lab-verified organic integrity, zero formalin, and natural bio-active goodness delivered directly to your table.
+            <div className="text-side-body mt-4 max-w-xl text-stone-700 text-lg sm:text-xl font-sans leading-relaxed">
+              From certified heritage orchards in Rajshahi to the virgin mangrove canopies of the Sundarbans. 100% lab-verified organic integrity, zero formalin, zero synthetic ripeners, and natural bio-active goodness delivered directly to your doorstep.
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 export const flavorTextures = {
-  royalMango: "/labels/lemon-lime.png",
-  sundarbanHoney: "/labels/cherry.png",
-  mountainNuts: "/labels/grape.png",
+  royalMango: "/images/pfo_mango_crate.jpg",
+  sundarbanHoney: "/images/pfo_sundarban_honey.jpg",
+  mountainNuts: "/images/pfo_mixed_nuts.jpg",
 };
 
 export const flavors = [

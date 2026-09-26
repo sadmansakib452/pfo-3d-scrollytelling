@@ -19,28 +19,29 @@
 ---
 
 ## 📍 Active Chapter Status
-- **Current Active Chapter:** `CHAPTER 4: PFO Asset Integration & Editorial Scrollytelling Adaptation`
-- **Status:** Completed & Production Verified 🟢
-- **Completed Milestones:** `Pre-flight Setup` (Completed ✅), `CHAPTER 1: Art Direction & Storyboard` (Completed ✅), `CHAPTER 2: Prompt Engineering & Studio Assets` (Completed ✅), `CHAPTER 3: Fizzi 3D Architecture Integration` (Completed ✅), `CHAPTER 4: 3 Real Products Integration & Build Verification` (Completed ✅)
+- **Current Active Chapter:** `CHAPTER 5C: SkyDrive Purity Chamber & 3D Scale Harmonization`
+- **Status:** Completed & Production Verified 🟢 (Commit: `815d2ac`)
+- **Completed Milestones:**
+  1. `CHAPTER 5A: Hero 3D Overlap Elimination & Laboratory HUD Scale` (Commit `5b10b42` ✅)
+  2. `CHAPTER 5B: Luxury E-Commerce Navbar & Responsive Drawer Cart` (Commit `bd18024` ✅)
+  3. `CHAPTER 5C: SkyDrive Purity Chamber & Organic Harmonization` (Commit `815d2ac` ✅)
+- **Next Milestone in Queue:** `CHAPTER 5D: Carousel E-Commerce Engine (Add to Cart, Qty, Scarcity Badge)`
 - **Live Local URL:** http://localhost:3000
 - **Foundation:** Next.js 14.2 (App Router) + React Three Fiber + Three.js 0.171 + GSAP ScrollTrigger + Lenis Smooth Scroll
-- **Integrated Product Photography:**
-  1. `public/images/pfo_mango_crate.jpg`: Royal Alphonso Mango in rustic straw crate with wax seal.
-  2. `public/images/pfo_sundarban_honey.jpg`: Artisanal Sundarban Raw Wild Honey with dipper and raw honeycomb.
-  3. `public/images/pfo_mixed_nuts.jpg`: Mountain Roasted Mixed Nuts & Seeds in engraved glass canister.
-- **Production Verification:** `npm.cmd run build` compiled successfully with 0 lint and 0 type errors.
+- **3D Scale Calibration:**
+  - `Can.jsx` default scale reduced from `2` to `1` (eliminates double-scaling overflow across all sections).
+  - Mango height calibrated to ~0.63 units (`scale={7.2}`).
+  - Honey Jar calibrated to ~0.68 units (`scale={4.2}` with custom PFO label band).
 
 ---
 
 ## 📋 Master Roadmap Overview
-- [x] **Pre-flight:** Antigravity AI Assistant, Memory, Rules, Team Born & Git Setup
-- [x] **CHAPTER 1:** Art Direction, Color Palette & Storyboard Finalization
-- [x] **CHAPTER 2:** Studio-Grade Prompt Engineering & Asset Generation (User + AI)
-- [x] **CHAPTER 3:** Next.js Architecture & Project Skeleton Setup
-- [x] **CHAPTER 4:** 3 Core Products & Real Asset Placement (Hero, AlternatingText, Carousel, SkyDrive)
-- [ ] **CHAPTER 5:** Exploded Mango Cinematic Video Scrubber Integration (`exploded_mango.mp4`)
-- [ ] **CHAPTER 6:** Bio-HUD Laboratory Precision Overlays & Audio Soundscape
-- [ ] **CHAPTER 7:** Final Polish, 60 FPS Audit & Push to Remote Repository
+- [x] **CHAPTER 5A:** Hero 3D Dual-Flagship Layout & Overlap Elimination (Mango + Honey Jar)
+- [x] **CHAPTER 5B:** Luxury E-Commerce Navbar, Currency Badge & Slide-over Cart Drawer
+- [x] **CHAPTER 5C:** SkyDrive Organic Golden Orchard Mist & 3D Model Proportion Harmonization
+- [ ] **CHAPTER 5D:** Carousel E-Commerce Integration (Interactive Qty, Direct Add-to-Basket, Scarcity Counter)
+- [ ] **CHAPTER 5E:** Alternating Scrollytelling Precision Sync (60 FPS & 3 Products)
+- [ ] **CHAPTER 5F:** Luxury E-Commerce Footer (Payment Gateways: bKash, Nagad, Visa, 0.00% Formalin Cert & Organic Dispatch)
 
 ---
 

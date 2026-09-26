@@ -1,66 +1,45 @@
-import { flavorTextures } from "@/data/data";
-import { Center, useGLTF, useTexture } from "@react-three/drei";
-import * as THREE from "three";
+import { Center, useGLTF } from "@react-three/drei";
 import { useMemo } from "react";
 
-useGLTF.preload("/models/Soda-can.gltf");
 useGLTF.preload("/models/mango.glb");
-
-const metalMaterial = new THREE.MeshStandardMaterial({
-  roughness: 0.25,
-  metalness: 0.85,
-  color: "#cda042", // Luxury champagne gold rim & tab
-});
+useGLTF.preload("/models/honey.glb");
 
 export function Can({ flavor = "royalMango", scale = 2, ...props }) {
-  const { nodes } = useGLTF("/models/Soda-can.gltf");
   const mangoGLTF = useGLTF("/models/mango.glb");
-  const labels = useTexture(flavorTextures);
+  const honeyGLTF = useGLTF("/models/honey.glb");
 
-  // fixes upside down labels
-  Object.values(labels).forEach((label) => {
-    label.flipY = false;
-  });
-
-  const label = labels[flavor] || labels.sundarbanHoney;
-
-  // Clone mango scene to prevent multi-instance graph conflicts
+  // Clone scenes to avoid graph conflicts across multiple instances
   const clonedMango = useMemo(() => mangoGLTF.scene.clone(), [mangoGLTF.scene]);
+  const clonedHoney = useMemo(() => honeyGLTF.scene.clone(), [honeyGLTF.scene]);
 
-  // If Royal Mango, render the REAL 3D ALPHONSO MANGO model!
+  // 1. Royal Alphonso Mango (Realistic 3D Fruit with natural scale)
   if (flavor === "royalMango") {
     return (
       <group {...props} dispose={null} scale={scale}>
         <Center>
-          <primitive object={clonedMango} scale={20} rotation={[0, Math.PI / 4, 0]} />
+          <primitive object={clonedMango} scale={7.2} rotation={[0, Math.PI / 4, 0]} />
         </Center>
       </group>
     );
   }
 
-  // Otherwise render the PFO reserve model with the custom user label
+  // 2. Sundarban Raw Wild Honey (Realistic 3D Glass Jar)
+  if (flavor === "sundarbanHoney") {
+    return (
+      <group {...props} dispose={null} scale={scale}>
+        <Center>
+          <primitive object={clonedHoney} scale={0.11} rotation={[0, Math.PI / 6, 0]} />
+        </Center>
+      </group>
+    );
+  }
+
+  // 3. Fallback / Mountain Nuts (Realistic 3D Honey Jar with offset angle)
   return (
-    <group {...props} dispose={null} scale={scale} rotation={[0, -Math.PI, 0]}>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Mesh.geometry}
-        material={metalMaterial}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Mesh_1.geometry}
-        material={nodes.Mesh_1.material}
-      >
-        <meshStandardMaterial roughness={0.2} metalness={0.4} map={label} />
-      </mesh>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Tab.geometry}
-        material={metalMaterial}
-      />
+    <group {...props} dispose={null} scale={scale}>
+      <Center>
+        <primitive object={clonedHoney} scale={0.11} rotation={[0, -Math.PI / 4, 0]} />
+      </Center>
     </group>
   );
 }

@@ -6,7 +6,7 @@ import { useMemo } from "react";
 useGLTF.preload("/models/mango.glb");
 useGLTF.preload("/models/honey.glb");
 
-export function Can({ flavor = "royalMango", scale = 2, ...props }) {
+export function Can({ flavor = "royalMango", scale = 1, ...props }) {
   const mangoGLTF = useGLTF("/models/mango.glb");
   const honeyGLTF = useGLTF("/models/honey.glb");
   const labels = useTexture(flavorTextures);

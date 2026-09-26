@@ -96,7 +96,7 @@ const SkyDriveScene = ({ sentence, flavor }) => {
 
     scrollTl
       .to("body", {
-        backgroundColor: "#C0F0F5",
+        backgroundColor: "#FEF3C7",
         overwrite: "auto",
         duration: 0.1,
       })
@@ -133,26 +133,26 @@ const SkyDriveScene = ({ sentence, flavor }) => {
           ref={canRef}
           flavor={flavor}
           rotationIntensity={0}
-          floatIntensity={3}
-          floatSpeed={3}
+          floatIntensity={2.5}
+          floatSpeed={2.5}
         >
-          <pointLight intensity={30} color="#8c0413" decay={0.6} />
+          <pointLight intensity={22} color="#F59E0B" decay={0.8} />
         </FloatingCan>
       </group>
 
-      {/* Clouds */}
+      {/* Orchard Morning Mist Clouds */}
       <Clouds ref={cloudsRef}>
-        <Cloud ref={cloud1Ref} bounds={[10, 10, 2]} />
-        <Cloud ref={cloud2Ref} bounds={[10, 10, 2]} />
+        <Cloud ref={cloud1Ref} bounds={[10, 10, 2]} color="#FEF3C7" opacity={0.5} />
+        <Cloud ref={cloud2Ref} bounds={[10, 10, 2]} color="#FFFBEB" opacity={0.6} />
       </Clouds>
 
-      {/* Text */}
+      {/* Editorial Authority Typography */}
       <group ref={wordsRef}>
-        {sentence && <ThreeText sentence={sentence} color="#f97315" />}
+        {sentence && <ThreeText sentence={sentence} color="#1C1917" />}
       </group>
 
-      {/* Lights */}
-      <ambientLight intensity={1} color="#9ddefa" />
+      {/* Organic Warm Lighting */}
+      <ambientLight intensity={1.2} color="#FFFBEB" />
       <Environment files="/hdrs/field.hdr" environmentIntensity={1.5} />
     </group>
   );

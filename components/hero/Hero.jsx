@@ -150,25 +150,44 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="text-side relative z-[80] grid min-h-screen items-center gap-8 md:grid-cols-2 py-16 px-4">
-          <div className="overflow-hidden rounded-3xl shadow-2xl border border-amber-900/15">
+        <div className="text-side relative z-[80] max-w-6xl mx-auto w-full grid min-h-screen items-center gap-8 md:gap-14 md:grid-cols-2 py-20 px-6">
+          <div className="overflow-hidden rounded-3xl shadow-2xl border border-amber-900/15 bg-white/40 p-2">
             <Image
               src="/images/pfo_mango_crate.jpg"
               alt="PFO Sovereign Organic Mango Crate"
               width={700}
               height={700}
-              className="w-full h-[380px] md:h-[480px] object-cover hover:scale-105 transition-transform duration-700"
+              className="w-full h-[360px] md:h-[460px] object-cover rounded-2xl hover:scale-105 transition-transform duration-700"
             />
           </div>
-          <div>
-            <span className="font-mono text-xs tracking-widest text-emerald-800 uppercase px-3 py-1 rounded-full bg-emerald-100 border border-emerald-300">
-              HARVEST LOT #089
-            </span>
-            <h2 className="text-side-heading text-balance text-4xl sm:text-5xl lg:text-7xl font-serif font-bold text-emerald-950 mt-4 leading-tight">
+          <div className="max-w-xl">
+            <div className="flex items-center gap-3 font-mono text-xs tracking-widest text-emerald-900 uppercase mb-3">
+              <span className="px-3 py-1 rounded-full bg-emerald-100 font-bold border border-emerald-300">
+                HARVEST LOT #089
+              </span>
+              <span className="opacity-75">RAJSHAHI & SUNDARBAN</span>
+            </div>
+            <h2 className="text-side-heading text-balance text-4xl sm:text-5xl lg:text-7xl font-serif font-black text-stone-900 mt-2 leading-[0.95]">
               <TextSplitter text="Three Pure Reserves" />
             </h2>
-            <div className="text-side-body mt-4 max-w-xl text-stone-700 text-lg sm:text-xl font-sans leading-relaxed">
+            <div className="text-side-body mt-6 max-w-lg text-stone-700 text-lg md:text-xl font-sans leading-relaxed">
               From certified heritage orchards in Rajshahi to the virgin mangrove canopies of the Sundarbans. 100% lab-verified organic integrity, zero formalin, zero synthetic ripeners, and natural bio-active goodness delivered directly to your doorstep.
+            </div>
+            <div className="mt-8 flex items-center gap-6 border-t border-stone-300/80 pt-6">
+              <div>
+                <p className="font-mono text-2xl font-bold text-amber-900">0.00%</p>
+                <p className="font-mono text-[11px] text-stone-500 uppercase tracking-wider">Formalin Tested</p>
+              </div>
+              <div className="w-[1px] h-8 bg-stone-300"></div>
+              <div>
+                <p className="font-mono text-2xl font-bold text-amber-900">19.2°</p>
+                <p className="font-mono text-[11px] text-stone-500 uppercase tracking-wider">Brix Sucrose</p>
+              </div>
+              <div className="w-[1px] h-8 bg-stone-300"></div>
+              <div>
+                <p className="font-mono text-2xl font-bold text-emerald-900">100%</p>
+                <p className="font-mono text-[11px] text-stone-500 uppercase tracking-wider">Bio-Active Raw</p>
+              </div>
             </div>
           </div>
         </div>

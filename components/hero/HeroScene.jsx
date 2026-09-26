@@ -10,122 +10,107 @@ import { useStore } from "@/hooks/useStore";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const HeroScene = () => {
-  const can1Ref = useRef();//hi
-  const can2Ref = useRef();
-  const can3Ref = useRef();
-  const can4Ref = useRef();
-  const can5Ref = useRef();
-
-  const can1GroupRef = useRef();
-  const can2GroupRef = useRef();
-
+  const mangoRef = useRef();
+  const honeyRef = useRef();
+  const mangoGroupRef = useRef();
+  const honeyGroupRef = useRef();
   const groupRef = useRef();
 
-  const FLOAT_SPEED = 1.5;
-
+  const FLOAT_SPEED = 1.2;
   const isReady = useStore((state) => state.isReady);
 
   useGSAP(() => {
     if (
-      !can1Ref.current ||
-      !can2Ref.current ||
-      !can3Ref.current ||
-      !can4Ref.current ||
-      !can5Ref.current ||
-      !can1GroupRef.current ||
-      !can2GroupRef.current ||
+      !mangoRef.current ||
+      !honeyRef.current ||
+      !mangoGroupRef.current ||
+      !honeyGroupRef.current ||
       !groupRef.current
     )
       return;
 
     isReady(true);
 
-    // Set cans starting location
-    gsap.set(can1Ref.current.position, { x: -1.5 });
-    gsap.set(can1Ref.current.rotation, { z: -0.5 });
+    // Initial positioning: Left for 3D Mango, Right for 3D Honey Jar
+    gsap.set(mangoRef.current.position, { x: -1.35, y: -0.1, z: 0 });
+    gsap.set(mangoRef.current.rotation, { z: -0.2, y: 0.3 });
 
-    gsap.set(can2Ref.current.position, { x: 1.5 });
-    gsap.set(can2Ref.current.rotation, { z: 0.5 });
-
-    gsap.set(can3Ref.current.position, { y: 5, z: 2 });
-    gsap.set(can4Ref.current.position, { x: 2, y: 4, z: 2 });
-    gsap.set(can5Ref.current.position, { y: -5 });
+    gsap.set(honeyRef.current.position, { x: 1.35, y: -0.1, z: 0 });
+    gsap.set(honeyRef.current.rotation, { z: 0.15, y: -0.3 });
 
     const introTl = gsap.timeline({
       defaults: {
-        duration: 3,
-        ease: "back.out(1.4)",
+        duration: 2.2,
+        ease: "back.out(1.2)",
       },
     });
 
     if (window.scrollY < 20) {
       introTl
-        .from(can1GroupRef.current.position, { y: -5, x: 1 }, 0)
-        .from(can1GroupRef.current.position, { z: 3 }, 0)
-        .from(can2GroupRef.current.position, { y: 5, x: 1 }, 0)
-        .from(can2GroupRef.current.position, { z: 3 }, 0);
+        .from(mangoGroupRef.current.position, { y: -4, x: -1 }, 0)
+        .from(honeyGroupRef.current.position, { y: 4, x: 1 }, 0);
     }
 
     const scrollTl = gsap.timeline({
-      defaults: { duration: 2 },
       scrollTrigger: {
         trigger: ".hero",
         start: "top top",
         end: "bottom bottom",
-        scrub: 1.5,
+        scrub: 1.2,
       },
     });
 
+    // When scrolling down Hero to "Three Pure Reserves", gracefully float models out of the way!
     scrollTl
-      // Rotate can group
-      .to(groupRef.current.rotation, { y: Math.PI * 2 })
-      // Can 1 - black cherry
-      .to(can1Ref.current.position, { x: -0.2, y: -0.7, z: -2 }, 0)
-      .to(can1Ref.current.rotation, { z: 0.3 }, 0)
-      // Can 2 - lemon lime
-      .to(can2Ref.current.position, { x: 1, y: -0.2, z: -1 }, 0)
-      .to(can2Ref.current.rotation, { z: 0 }, 0)
-      // Can 3 - grape
-      .to(can3Ref.current.position, { x: -0.3, y: 0.5, z: -1 }, 0)
-      .to(can3Ref.current.rotation, { z: -0.1 }, 0)
-      // Can 4 - strawberry lemonade
-      .to(can4Ref.current.position, { x: 0, y: -0.3, z: 0.5 }, 0)
-      .to(can4Ref.current.rotation, { z: 0.3 }, 0)
-      // Can 5 - watermelon
-      .to(can5Ref.current.position, { x: 0.3, y: 0.5, z: -0.5 }, 0)
-      .to(can5Ref.current.rotation, { z: -0.25 }, 0)
-      // Transform can group
+      // Rotate group naturally
+      .to(groupRef.current.rotation, { y: Math.PI * 0.8 }, 0)
+      // Mango floats up and outwards to the left
       .to(
-        groupRef.current.position,
-        { x: 1, duration: 3, ease: "sine.inOut" },
-        1.3
+        mangoRef.current.position,
+        { x: -2.4, y: 3.5, z: -1, ease: "power2.inOut" },
+        0
+      )
+      .to(
+        mangoRef.current.rotation,
+        { z: 0.8, y: Math.PI, ease: "power2.inOut" },
+        0
+      )
+      // Honey floats up and outwards to the right, CLEARING the text completely!
+      .to(
+        honeyRef.current.position,
+        { x: 2.4, y: 3.5, z: -1, ease: "power2.inOut" },
+        0
+      )
+      .to(
+        honeyRef.current.rotation,
+        { z: -0.6, y: -Math.PI, ease: "power2.inOut" },
+        0
       );
   });
 
   return (
     <group ref={groupRef}>
-      <group ref={can1GroupRef}>
+      {/* Flagship Product 1: The Sovereign Alphonso Mango on the Left */}
+      <group ref={mangoGroupRef}>
         <FloatingCan
-          ref={can1Ref}
+          ref={mangoRef}
           flavor="royalMango"
           floatSpeed={FLOAT_SPEED}
+          floatIntensity={0.8}
         />
       </group>
-      <group ref={can2GroupRef}>
+
+      {/* Flagship Product 2: Sundarban Raw Honey on the Right */}
+      <group ref={honeyGroupRef}>
         <FloatingCan
-          ref={can2Ref}
+          ref={honeyRef}
           flavor="sundarbanHoney"
           floatSpeed={FLOAT_SPEED}
+          floatIntensity={0.8}
         />
       </group>
-      <FloatingCan ref={can3Ref} flavor="mountainNuts" floatSpeed={FLOAT_SPEED} />
-      <FloatingCan
-        ref={can4Ref}
-        flavor="royalMango"
-        floatSpeed={FLOAT_SPEED}
-      />
-      <FloatingCan ref={can5Ref} flavor="sundarbanHoney" floatSpeed={FLOAT_SPEED} />
-      <Environment files="/hdrs/field.hdr" environmentIntensity={1.5} />
+
+      <Environment files="/hdrs/field.hdr" environmentIntensity={1.4} />
     </group>
   );
 };

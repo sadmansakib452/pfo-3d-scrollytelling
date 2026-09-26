@@ -102,43 +102,41 @@ const Hero = () => {
       <div className="grid">
         <div className="grid h-screen place-items-center">
           <div className="grid auto-rows-min place-items-center text-center">
-            <h1 className="hero-header text-7xl font-black uppercase leading-[.8] text-orange-500 md:text-[9rem] lg:text-[13rem]">
+            <h1 className="hero-header text-7xl font-black uppercase leading-[.8] text-amber-600 md:text-[9rem] lg:text-[13rem]">
               <TextSplitter
-                text="live gutsy"
+                text="PURE FRESH"
                 wordDisplayStyle="block"
                 className="hero-header-word"
               />
             </h1>
-            <div className="hero-subheading mt-12 text-5xl font-semibold text-sky-950j lg:text-6xl">
-              Soda Perfected
+            <div className="hero-subheading mt-12 text-5xl font-semibold text-emerald-950 lg:text-6xl">
+              The Sovereign Harvest
             </div>
-            <div className="hero-body text-2xl font-mono text-sky-950">
-              3-5g sugar. 9g fiber.5 delicious flavors.
+            <div className="hero-body text-xl md:text-2xl font-mono text-emerald-900 mt-4">
+              100% Tree-Ripened • Zero Synthetic Chemicals • 0.00% Formalin
             </div>
             <Button
-              buttonLink="/"
-              buttonText="SHOP NOW"
-              className="hero-button mt-12"
+              buttonLink="#reserves"
+              buttonText="EXPLORE RESERVES"
+              className="hero-button mt-12 bg-emerald-800 text-white hover:bg-emerald-900"
             />
           </div>
         </div>
 
         <div className="text-side relative z-[80] grid h-screen items-center gap-4 md:grid-cols-2">
           <Image
-            src="/images/all-cans-bunched.png"
-            alt="Picture of the author"
-            width={500}
-            height={500}
-            className="w-full md:hidden"
+            src="/images/pfo_mango_crate.jpg"
+            alt="PFO Sovereign Organic Mango Crate"
+            width={600}
+            height={600}
+            className="w-full rounded-2xl shadow-2xl object-cover max-h-[450px] md:hidden"
           />
           <div>
-            <h2 className="text-side-heading text-balance text-6xl font-bold uppercase text-sky-950 lg:text-8xl">
-              <TextSplitter text="Try all five flavors" />
+            <h2 className="text-side-heading text-balance text-6xl font-bold uppercase text-emerald-950 lg:text-8xl">
+              <TextSplitter text="Three Pure Reserves" />
             </h2>
-            <div className="text-side-body mt-4 max-w-xl text-balance text-xl font-normal text-sky-950">
-              Our soda is made with real fruit juice and a touch of cane sugar.
-              We never use artificial sweeteners or high fructose corn syrup.
-              Try all five flavors and find your favorite!
+            <div className="text-side-body mt-4 max-w-xl text-balance text-xl font-normal text-emerald-900">
+              From certified heritage orchards in Rajshahi to the virgin mangrove forests of the Sundarbans. 100% lab-verified organic integrity, zero formalin, and natural bio-active goodness delivered directly to your table.
             </div>
           </div>
         </div>

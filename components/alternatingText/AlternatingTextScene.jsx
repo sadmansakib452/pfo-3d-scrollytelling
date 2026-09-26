@@ -7,7 +7,7 @@ import { useRef } from "react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const bgColors = ["#ffa6b5", "#e9cff6", "#cbef9a"];
+const bgColors = ["#FEF3C7", "#FFFBEB", "#F0FDF4"];
 
 const AlternatingTextScene = () => {
   const canRef = useRef(null);
@@ -56,7 +56,7 @@ const AlternatingTextScene = () => {
 
   return (
     <group ref={canRef} position-x={1} rotation-y={-0.3}>
-      <FloatingCan flavor="strawberryLemonade" />
+      <FloatingCan flavor="royalMango" />
       <Environment files="/hdrs/lobby.hdr" environmentIntensity={1.5} />
     </group>
   );

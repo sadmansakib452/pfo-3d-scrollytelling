@@ -107,24 +107,24 @@ const HeroScene = () => {
       <group ref={can1GroupRef}>
         <FloatingCan
           ref={can1Ref}
-          flavor="blackCherry"
+          flavor="royalMango"
           floatSpeed={FLOAT_SPEED}
         />
       </group>
       <group ref={can2GroupRef}>
         <FloatingCan
           ref={can2Ref}
-          flavor="lemonLime"
+          flavor="sundarbanHoney"
           floatSpeed={FLOAT_SPEED}
-        />{" "}
+        />
       </group>
-      <FloatingCan ref={can3Ref} flavor="grape" floatSpeed={FLOAT_SPEED} />{" "}
+      <FloatingCan ref={can3Ref} flavor="mountainNuts" floatSpeed={FLOAT_SPEED} />
       <FloatingCan
         ref={can4Ref}
-        flavor="strawberryLemonade"
+        flavor="royalMango"
         floatSpeed={FLOAT_SPEED}
       />
-      <FloatingCan ref={can5Ref} flavor="watermelon" floatSpeed={FLOAT_SPEED} />
+      <FloatingCan ref={can5Ref} flavor="sundarbanHoney" floatSpeed={FLOAT_SPEED} />
       <Environment files="/hdrs/field.hdr" environmentIntensity={1.5} />
     </group>
   );

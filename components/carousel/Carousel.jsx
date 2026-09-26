@@ -53,12 +53,17 @@ const Carousel = () => {
   };
 
   return (
-    <section className="carousel relative grid h-screen grid-rows-[auto, 4fr, auto] justify-center overflow-hidden bg-white py-12 text-white">
-      <div className="background pointer-events-none absolute inset-0 bg-[#710523] opacity-50"></div>
-      <WavyCircles className="absolute left-1/2 top-1/2 h-[120vmin] -translate-x-1/2 -translate-y-1/2 text-[#710523]" />
-      <h2 className="relative text-center text-5xl font-bold">
-        Choose Your Flavor
-      </h2>
+    <section id="reserves" className="carousel relative grid h-screen grid-rows-[auto, 4fr, auto] justify-center overflow-hidden bg-stone-900 py-12 text-white">
+      <div className="background pointer-events-none absolute inset-0 bg-[#E59000] opacity-60"></div>
+      <WavyCircles className="absolute left-1/2 top-1/2 h-[120vmin] -translate-x-1/2 -translate-y-1/2 text-[#E59000]" />
+      <div className="relative text-center z-10">
+        <span className="font-mono text-xs uppercase tracking-widest text-amber-200 border border-amber-300/40 px-3 py-1 rounded-full">
+          Lab-Tested Organic Selection
+        </span>
+        <h2 className="mt-2 text-3xl md:text-5xl font-serif font-bold">
+          Explore Our Heritage Reserves
+        </h2>
+      </div>
 
       <div className="grid grid-cols-[auto,auto,auto] items-center">
         {/* Left */}
@@ -93,15 +98,20 @@ const Carousel = () => {
         />
       </div>
 
-      <div className="text-area relative mx-auto text-center">
-        <div
-          className="text-wrapper text-4xl font-medium"
-          // style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"
-        >
-          <p>{flavors[currentFlavorIndex].name}</p>
-        </div>
-        <div className="mt-2 text-2xl font-normal opacity-90">
-          <p>12 cans - $35.99</p>
+      <div className="text-area relative mx-auto text-center px-4 max-w-2xl z-10 pb-6">
+        <div className="text-wrapper">
+          <p className="text-2xl md:text-4xl font-serif font-bold tracking-tight text-white drop-shadow">
+            {flavors[currentFlavorIndex].name}
+          </p>
+          <p className="mt-1 text-xs md:text-sm font-mono uppercase tracking-widest text-amber-200">
+            {flavors[currentFlavorIndex].subtitle}
+          </p>
+          <div className="mt-2 inline-block font-mono text-lg md:text-xl font-bold bg-white/10 backdrop-blur-md px-4 py-1 rounded-lg border border-white/20">
+            {flavors[currentFlavorIndex].price}
+          </div>
+          <p className="mt-2 text-xs md:text-sm text-stone-100 font-sans leading-relaxed max-w-lg mx-auto opacity-95">
+            {flavors[currentFlavorIndex].description}
+          </p>
         </div>
       </div>
     </section>

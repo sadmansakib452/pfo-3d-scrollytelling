@@ -19,25 +19,28 @@
 ---
 
 ## 📍 Active Chapter Status
-- **Current Active Chapter:** `CHAPTER 3 (Pivot): Fizzi 3D Ecommerce Landing Integration`
-- **Status:** Completed & Live 🟢
-- **Completed Milestones:** `Pre-flight Setup` (Completed ✅), `CHAPTER 1: Art Direction & Storyboard` (Completed ✅), `CHAPTER 2: Prompt Engineering & Studio Assets` (Completed ✅), `CHAPTER 3: Fizzi 3D Architecture Integration` (Completed ✅)
+- **Current Active Chapter:** `CHAPTER 4: PFO Asset Integration & Editorial Scrollytelling Adaptation`
+- **Status:** Completed & Production Verified 🟢
+- **Completed Milestones:** `Pre-flight Setup` (Completed ✅), `CHAPTER 1: Art Direction & Storyboard` (Completed ✅), `CHAPTER 2: Prompt Engineering & Studio Assets` (Completed ✅), `CHAPTER 3: Fizzi 3D Architecture Integration` (Completed ✅), `CHAPTER 4: 3 Real Products Integration & Build Verification` (Completed ✅)
 - **Live Local URL:** http://localhost:3000
-- **Foundation:** Fizzi 3D (Next.js 14, React Three Fiber, Three.js, GSAP ScrollTrigger, Lenis, Zustand)
-- **Next Target:** Rebrand and adapt 3D models and copy into PFO – Pure Fresh Organic (Organic Mango & Cold-Pressed Nectar) with our cinema assets and editorial typography.
+- **Foundation:** Next.js 14.2 (App Router) + React Three Fiber + Three.js 0.171 + GSAP ScrollTrigger + Lenis Smooth Scroll
+- **Integrated Product Photography:**
+  1. `public/images/pfo_mango_crate.jpg`: Royal Alphonso Mango in rustic straw crate with wax seal.
+  2. `public/images/pfo_sundarban_honey.jpg`: Artisanal Sundarban Raw Wild Honey with dipper and raw honeycomb.
+  3. `public/images/pfo_mixed_nuts.jpg`: Mountain Roasted Mixed Nuts & Seeds in engraved glass canister.
+- **Production Verification:** `npm.cmd run build` compiled successfully with 0 lint and 0 type errors.
 
 ---
 
 ## 📋 Master Roadmap Overview
 - [x] **Pre-flight:** Antigravity AI Assistant, Memory, Rules, Team Born & Git Setup
-- [ ] **CHAPTER 1:** Art Direction, Color Palette & Storyboard Finalization
-- [ ] **CHAPTER 2:** Studio-Grade Prompt Engineering & Asset Generation (User + AI)
-- [ ] **CHAPTER 3:** Next.js Architecture & Project Skeleton Setup
-- [ ] **CHAPTER 4:** Core 3D Scene & PBR Texture Mapping
-- [ ] **CHAPTER 5:** Scrollytelling Choreography & GSAP Timelines
-- [ ] **CHAPTER 6:** Bio-HUD, Glassmorphism UI & Editorial Copy Overlay
-- [ ] **CHAPTER 7:** Ambient Sound Design, Micro-Interactions & Polish
-- [ ] **CHAPTER 8:** Production Build, Performance Audit (60 FPS) & Demo Rehearsal
+- [x] **CHAPTER 1:** Art Direction, Color Palette & Storyboard Finalization
+- [x] **CHAPTER 2:** Studio-Grade Prompt Engineering & Asset Generation (User + AI)
+- [x] **CHAPTER 3:** Next.js Architecture & Project Skeleton Setup
+- [x] **CHAPTER 4:** 3 Core Products & Real Asset Placement (Hero, AlternatingText, Carousel, SkyDrive)
+- [ ] **CHAPTER 5:** Exploded Mango Cinematic Video Scrubber Integration (`exploded_mango.mp4`)
+- [ ] **CHAPTER 6:** Bio-HUD Laboratory Precision Overlays & Audio Soundscape
+- [ ] **CHAPTER 7:** Final Polish, 60 FPS Audit & Push to Remote Repository
 
 ---
 
@@ -51,12 +54,13 @@
 7. **Decision 07 (Team Structure):** Humanized multi-agent system established with Aryan Chowdhury (Visuals) and Rayan Ahmed (WebGL/Performance).
 8. **Decision 08 (Anti-AI Cliché & Vibe Engineering Law):** Zero generic AI tropes (no cheap sparkles, no generic pill badges, no default AI cards). Everything must be engineered with senior editorial craftsmanship (Aesop / Apple / Kinfolk standard).
 9. **Decision 09 (Typography Trinity):** Three-tier font architecture: Cormorant Garamond (Editorial Display Serif), Plus Jakarta Sans (Modern Clean UI Sans), and JetBrains Mono (Scientific Bio-HUD Mono).
+10. **Decision 10 (Product Strategy Alignment):** Completely replaced soda tropes with 3 authentic PFO organic products: Royal Alphonso Mango (Rajshahi), Sundarban Raw Wild Honey, and Mountain Roasted Nuts & Seeds.
 
 ---
 
 ## 📦 Asset Manifest & Registry
-*(Will be populated during Chapter 2)*
-- **Motion Background:** Pending
-- **3D Textures (PBR 8K):** Pending
-- **Branding & HUD Badges:** Pending
-- **Packaging / Product Models:** Pending
+- **Hero / Mango Asset:** `public/images/pfo_mango_crate.jpg` (Integrated in Hero & Section 1)
+- **Honey Asset:** `public/images/pfo_sundarban_honey.jpg` (Integrated in Section 2)
+- **Nuts Asset:** `public/images/pfo_mixed_nuts.jpg` (Integrated in Section 3)
+- **Cinematic Video:** `public/assets/videos/exploded_mango.mp4` (Ready for Chapter 5 Scroller)
+- **Can 3D Label Mappings:** Royal Mango, Sundarban Honey, Mountain Nuts in `data/data.js`

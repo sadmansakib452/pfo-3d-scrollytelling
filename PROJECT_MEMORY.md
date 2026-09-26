@@ -48,6 +48,8 @@
 5. **Decision 05 (Role Division):** User generates assets externally using Gemini Pro & Google Video/Flow; Agent acts as Chief Prompt Architect, Evaluator, and Lead Frontend/3D Engineer.
 6. **Decision 06 (Process Rule):** Strict sequential Chapter-by-Chapter progression. Zero unauthorized file writing. Explicit user approval required at each milestone.
 7. **Decision 07 (Team Structure):** Humanized multi-agent system established with Aryan Chowdhury (Visuals) and Rayan Ahmed (WebGL/Performance).
+8. **Decision 08 (Anti-AI Cliché & Vibe Engineering Law):** Zero generic AI tropes (no cheap sparkles, no generic pill badges, no default AI cards). Everything must be engineered with senior editorial craftsmanship (Aesop / Apple / Kinfolk standard).
+9. **Decision 09 (Typography Trinity):** Three-tier font architecture: Cormorant Garamond (Editorial Display Serif), Plus Jakarta Sans (Modern Clean UI Sans), and JetBrains Mono (Scientific Bio-HUD Mono).
 
 ---
 
